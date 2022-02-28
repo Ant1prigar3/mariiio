@@ -11,7 +11,7 @@ map_file = args.map
 
 
 def load_image(name, color_key=None):
-    fullname = os.path.join('data', name)
+    fullname = os.path.join('data3', name)
     try:
         image = pygame.image.load(fullname)
     except pygame.error as message:
@@ -140,7 +140,7 @@ def start_screen():
 
 
 def load_level(filename):
-    filename = "data/" + filename
+    filename = "data3/" + filename
     with open(filename, 'r') as mapFile:
         lvl_map = [line.strip() for line in mapFile]
     max_width = max(map(len, lvl_map))
